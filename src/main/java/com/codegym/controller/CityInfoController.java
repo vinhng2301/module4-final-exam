@@ -31,6 +31,19 @@ public class CityInfoController {
         return model;
     }
 
+    @GetMapping("/delete")
+    private ModelAndView deleteCityView(@RequestParam("id") Long id){
+        Optional<City> cityOptional = cityService.findById(id);
+        ModelAndView model = new ModelAndView("delete","city",cityOptional.get());
+        return model;
+    }
+    @PostMapping("/delete")
+    private ModelAndView deleteCity(@RequestParam("id") Long id){
+        cityService.remove(id);
+        ModelAndView model = new ModelAndView("redirect:/");
+        return model;
+    }
+
     @GetMapping("/edit")
     private ModelAndView cityEditForm(@RequestParam("id") Long id){
         List<Country> countryList = (List<Country>) countryService.findAll();
@@ -47,16 +60,5 @@ public class CityInfoController {
         return modelAndView;
     }
 
-    @GetMapping("/delete")
-    private ModelAndView deleteCityView(@RequestParam("id") Long id){
-        Optional<City> cityOptional = cityService.findById(id);
-        ModelAndView model = new ModelAndView("delete","city",cityOptional.get());
-        return model;
-    }
-    @PostMapping("/delete")
-    private ModelAndView deleteCity(@RequestParam("id") Long id){
-        cityService.remove(id);
-        ModelAndView model = new ModelAndView("redirect:/");
-        return model;
-    }
+
 }
