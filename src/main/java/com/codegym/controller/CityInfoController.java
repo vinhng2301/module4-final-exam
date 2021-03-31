@@ -27,7 +27,7 @@ public class CityInfoController {
     @GetMapping("/view")
     private ModelAndView cityView(@RequestParam("id") Long id){
         Optional<City> cityOptional = cityService.findById(id);
-        ModelAndView model = new ModelAndView("viewcity","city",cityOptional.get());
+        ModelAndView model = new ModelAndView("view","city",cityOptional.get());
         return model;
     }
 
@@ -43,7 +43,7 @@ public class CityInfoController {
     @PostMapping("/edit")
     public ModelAndView createCity(@ModelAttribute City city){
         cityService.save(city);
-        ModelAndView modelAndView = new ModelAndView("city","message","Tạo Thành Phố Thành Công");
+        ModelAndView modelAndView = new ModelAndView("edit","message","Edit City Successfully");
         return modelAndView;
     }
 

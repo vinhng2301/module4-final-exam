@@ -9,24 +9,24 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <a href="/">Trở về trang chính</a>
+    <a href="/">Back To Main Page</a>
     <fieldset>
         <legend th:text="${city.name}"></legend>
         <table class="table table-striped">
             <tr>
-                <td>Tên</td>
+                <td>City</td>
                 <td th:text="${city.name}"></td>
             </tr>
             <tr>
-                <td>Quốc gia</td>
+                <td>Country</td>
                 <td th:text="${city.country.name}"></td>
             </tr>
             <tr>
-                <td>Diện tích</td>
+                <td>Area</td>
                 <td th:text="${city.area}"></td>
             </tr>
             <tr>
-                <td>Dân số</td>
+                <td>Population</td>
                 <td th:text="${city.population}"></td>
             </tr>
             <tr>
@@ -34,11 +34,11 @@
                 <td th:text="${city.GDP}"></td>
             </tr>
             <tr>
-                <td>Giới thiệu</td>
+                <td>Description</td>
                 <td th:text="${city.desc}"></td>
             </tr>
         </table>
-        <td><a th:href="@{/edit(id=${city.id})}">Chỉnh Sửa</a>
+        <td><a th:href="@{/edit(id=${city.id})}">Edit</a>
     </fieldset>
 </body>
 </html>

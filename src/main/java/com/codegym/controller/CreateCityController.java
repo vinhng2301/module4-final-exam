@@ -22,7 +22,6 @@ public class CreateCityController {
     @Autowired
     private CityService cityService;
 
-    //-------------Create Country------------------------------------------
     @GetMapping("/createCountry")
     public ModelAndView createCountryForm(){
         ModelAndView model = new ModelAndView("country", "country",new Country());
@@ -46,7 +45,7 @@ public class CreateCityController {
     @PostMapping("/create")
     public ModelAndView createCity(@ModelAttribute City city){
         cityService.save(city);
-        ModelAndView modelAndView = new ModelAndView("city","message","Tạo Thành Phố Thành Công");
+        ModelAndView modelAndView = new ModelAndView("city","message","Add City Succesfully");
         return modelAndView;
     }
 }

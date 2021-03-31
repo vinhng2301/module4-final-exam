@@ -10,27 +10,27 @@
 </head>
 <body>
     <fieldset>
-        <legend><h2>Thêm Thành Phố</h2></legend>
+        <legend><h2>Add City</h2></legend>
         <h4 th:if="${message}" th:text="${message}"></h4>
         <form method="post" >
             <table class="table table-striped">
                 <tr>
-                    <td>Tên</td>
+                    <td>City</td>
                     <td><input type="text" th:field="${city.name}"></td>
                 </tr>
                 <tr>
-                    <td>Quốc gia</td>
+                    <td>Country</td>
                     <td><select name="country" id="country" th:field="${city.country}">
                         <option th:each="country: ${countryList}" th:value="${country.id}" th:utext="${country.name}"/>
                     </select>
                     </td>
                 </tr>
                 <tr>
-                    <td>Diện tích</td>
+                    <td>Area</td>
                     <td><input type="number" th:field="${city.area}"></td>
                 </tr>
                 <tr>
-                    <td>Dân số</td>
+                    <td>Population</td>
                     <td><input type="number" th:field="${city.population}"></td>
                 </tr>
                 <tr>
@@ -38,14 +38,14 @@
                     <td><input type="number" th:field="${city.GDP}"></td>
                 </tr>
                 <tr>
-                    <td>Giới thiệu</td>
+                    <td>Description</td>
                     <td><textarea cols="30" rows="10" th:field="${city.desc}"></textarea></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>
                         <input type="submit" value="Nhập Thành Phố">
-                        <a href="/">Thoát</a>
+                        <a href="/">Exit</a>
                     </td>
                 </tr>
             </table>

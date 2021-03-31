@@ -11,7 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.List;
 
 @Controller
-public class MainWebController {
+public class MainController {
 
     @Autowired
     private CountryService countryService;
