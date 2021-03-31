@@ -1,5 +1,7 @@
 package com.codegym.model;
 
+import com.sun.istack.NotNull;
+
 import javax.persistence.*;
 
 @Entity
@@ -16,7 +18,6 @@ public class City {
     private String descCity;
 
     @ManyToOne
-    @JoinColumn(name = "address_id")
     private Country country;
 
     public City() {
