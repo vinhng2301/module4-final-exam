@@ -1,6 +1,6 @@
 package com.codegym.service;
 
-import com.codegym.testmodule.model.City;
+import com.codegym.model.City;
 
 public interface CityService extends GeneralService<City>{
 }

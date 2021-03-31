@@ -1,8 +1,8 @@
 package com.codegym.service.impl;
 
-import com.codegym.testmodule.model.City;
-import com.codegym.testmodule.repository.CityRepository;
-import com.codegym.testmodule.service.CityService;
+import com.codegym.model.City;
+import com.codegym.repository.CityRepository;
+import com.codegym.service.CityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

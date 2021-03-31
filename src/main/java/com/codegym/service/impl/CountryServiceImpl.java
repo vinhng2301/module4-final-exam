@@ -1,8 +1,8 @@
 package com.codegym.service.impl;
 
-import com.codegym.testmodule.model.Country;
-import com.codegym.testmodule.repository.CountryRepository;
-import com.codegym.testmodule.service.CountryService;
+import com.codegym.model.Country;
+import com.codegym.repository.CountryRepository;
+import com.codegym.service.CountryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
