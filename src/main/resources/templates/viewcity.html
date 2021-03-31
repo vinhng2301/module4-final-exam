@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Thành Phố</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <a href="/">Trở về trang chính</a>
+    <fieldset>
+        <legend th:text="${city.name}"></legend>
+        <table class="table table-striped">
+            <tr>
+                <td>Tên</td>
+                <td th:text="${city.name}"></td>
+            </tr>
+            <tr>
+                <td>Quốc gia</td>
+                <td th:text="${city.country.name}"></td>
+            </tr>
+            <tr>
+                <td>Diện tích</td>
+                <td th:text="${city.area}"></td>
+            </tr>
+            <tr>
+                <td>Dân số</td>
+                <td th:text="${city.population}"></td>
+            </tr>
+            <tr>
+                <td>GPD</td>
+                <td th:text="${city.GDP}"></td>
+            </tr>
+            <tr>
+                <td>Giới thiệu</td>
+                <td th:text="${city.desc}"></td>
+            </tr>
+        </table>
+    </fieldset>
+</body>
+</html>
