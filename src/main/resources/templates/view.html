@@ -9,7 +9,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <a href="/">Back To Home Page</a>
     <fieldset>
         <legend th:text="${city.name}"></legend>
         <table class="table table-striped">
@@ -40,5 +39,6 @@
         </table>
         <td><a th:href="@{/edit(id=${city.id})}">Edit</a>
     </fieldset>
+    <a href="/">Back To Home Page</a>
 </body>
 </html>
